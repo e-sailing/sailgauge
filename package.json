@@ -1,20 +1,65 @@
 {
-  "name": "@signalk/sailgauge",
-  "version": "1.0.2",
-  "description": "Multipurpose full screen gauge for displaying sailing related Signal K data",
-  "main": "index.js",
-  "keywords": [
-    "signalk-webapp"
+  "_args": [
+    [
+      {
+        "raw": "sailgauge@github:signalk/sailgauge",
+        "scope": null,
+        "escapedName": "sailgauge",
+        "name": "sailgauge",
+        "rawSpec": "github:signalk/sailgauge",
+        "spec": "github:signalk/sailgauge",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:signalk/sailgauge.git",
+          "sshUrl": "git+ssh://git@github.com/signalk/sailgauge.git",
+          "httpsUrl": "git+https://github.com/signalk/sailgauge.git",
+          "gitUrl": "git://github.com/signalk/sailgauge.git",
+          "shortcut": "github:signalk/sailgauge",
+          "directUrl": "https://raw.githubusercontent.com/signalk/sailgauge/master/package.json"
+        }
+      },
+      "/home/pi/.config/signalk-server-node"
+    ]
   ],
-  "repository": "https://github.com/SignalK/sailgauge",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run watch",
-    "build": "webpack -p --devtool source-map",
-    "watch": "webpack -d --watch"
+  "_from": "signalk/sailgauge",
+  "_id": "@signalk/sailgauge@1.0.2",
+  "_inCache": true,
+  "_location": "/@signalk/sailgauge",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "sailgauge@github:signalk/sailgauge",
+    "scope": null,
+    "escapedName": "sailgauge",
+    "name": "sailgauge",
+    "rawSpec": "github:signalk/sailgauge",
+    "spec": "github:signalk/sailgauge",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:signalk/sailgauge.git",
+      "sshUrl": "git+ssh://git@github.com/signalk/sailgauge.git",
+      "httpsUrl": "git+https://github.com/signalk/sailgauge.git",
+      "gitUrl": "git://github.com/signalk/sailgauge.git",
+      "shortcut": "github:signalk/sailgauge",
+      "directUrl": "https://raw.githubusercontent.com/signalk/sailgauge/master/package.json"
+    }
   },
-  "author": "Teppo Kurki <teppo.kurki@iki.fi>",
-  "license": "ISC",
+  "_requiredBy": [],
+  "_resolved": "git://github.com/signalk/sailgauge.git#680399fc98459bfa979ceec387798f5a15dde9eb",
+  "_shasum": "eee6f1517a0b20bd05944ebda79dc67f476586fb",
+  "_shrinkwrap": null,
+  "_spec": "sailgauge@github:signalk/sailgauge",
+  "_where": "/home/pi/.config/signalk-server-node",
+  "author": {
+    "name": "Teppo Kurki",
+    "email": "teppo.kurki@iki.fi"
+  },
+  "bugs": {
+    "url": "https://github.com/SignalK/sailgauge/issues"
+  },
+  "dependencies": {},
+  "description": "Multipurpose full screen gauge for displaying sailing related Signal K data",
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-engine-plugin": "^0.1.2",
@@ -25,8 +70,30 @@
     "debug": "^2.1.0",
     "js-quantities": "^1.6.0",
     "json-loader": "^0.5.4",
-    "signalk-client": "SignalK/signalk-js-client",
-    "signalk-schema": "signalk/specification",
+    "signalk-client": "github:signalk/signalk-js-client",
+    "signalk-schema": "github:signalk/specification",
     "webpack": "^3.0.0"
-  }
+  },
+  "gitHead": "680399fc98459bfa979ceec387798f5a15dde9eb",
+  "homepage": "https://github.com/SignalK/sailgauge#readme",
+  "keywords": [
+    "signalk-webapp"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "@signalk/sailgauge",
+  "optionalDependencies": {},
+  "readme": "# SailGauge\n\nOne gauge to rule them all - provides all the information a sailor needs on one display\n* SOG - speed over ground (meters per second)\n* COG - course over ground\n* DBT - depth below transducer (meters)\n* reverse laylines, eg. 'how high can I point'\n* apparent & true wind m/s (true calculated if the data feed doesn't contain it)\n* distance and direction of mark/waypoint (if feed has it)\n\nDepth reading has also a small sparkline. Depth figure starts to grow under 6 meters and turns red under 3 meters.\n\n## Installation\n\nYou can just download SailGauge from Github or install it with Bower\n\n```\nbower install https://github.com/SignalK/sailgauge.git\n```\n\nSailGauge package contains all the js libraries it uses so it is ready to use out of the box, but it needs data from a SignalK server.  It tries to contact SignalK server on the same server & port from which it was loaded.\n\nIf you want it to contact some other server you need to edit the index.html.\n\n## Building\n\nInstall the js dependencies with \n```\nnpm install\n```\n\nand then package the js code that is not part of the html page with \n\n```\nnpm run build\n```\n\nDevelopment time building with `npm run watch`.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SignalK/sailgauge.git"
+  },
+  "scripts": {
+    "build": "webpack -p --devtool source-map",
+    "start": "npm run watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack -d --watch"
+  },
+  "version": "1.0.2"
 }

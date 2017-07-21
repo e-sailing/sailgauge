@@ -14,8 +14,18 @@ Depth reading has also a small sparkline. Depth figure starts to grow under 6 me
 You can just download SailGauge from Github or install it with Bower
 
 ```
-bower install https://github.com/SignalK/sailgauge.git
+cd signalk-server-node
+git clone https://github.com/e-sailing/sailgauge.git
 ```
+
+Open the internet browser and enter
+localhost:3000/sailgauge
+
+(OpenPlotter users: sailgauge has problems with 
+"uuid": "urn:mrn:imo:mmsi:
+change this to 
+"uuid": "urn:mrn:signalk:uuid:
+in /home/pi/.config/openplotter/OP-signalk/openplotter-settings.json)
 
 SailGauge package contains all the js libraries it uses so it is ready to use out of the box, but it needs data from a SignalK server.  It tries to contact SignalK server on the same server & port from which it was loaded.
 
